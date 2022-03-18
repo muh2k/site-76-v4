@@ -12,17 +12,14 @@
 #What features does site-76 bot v4 feature?
 <details><summary>Available Features</summary>
   | Features             | Availability |
-| -------------------- | ------------ |                                                                                                                                
+| -------------------- | ------------ |            
 | Info                 |     ✅       |
-  
-| Moderation           |     ✅       |
-  
+| Moderation           |     ✅       | 
 | OwnerOnly            |     ✅       |
-  
 | Util                 |     ❌       |
   </details>
   -- 
-  
+ 
 ## Getting started
 #### Creating a fork:
 - 1). [Click here to fork the repository](https://github.com/muh2k/site-76-v4)
