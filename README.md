@@ -14,12 +14,12 @@
   | Features             | Availability | 
   
 | -------------------- | ------------ |  
-  
+                       |              |
 | Info                 |     ✅       | 
-  
-| Moderation           |     ✅       |                                                                                                                                  
+                       |              |
+| Moderation           |     ✅       |                                                                                                                                              |              |
 | OwnerOnly            |     ✅       | 
-  
+|                      |              |
 | Util                 |     ❌       |
   </details>
   -- 
