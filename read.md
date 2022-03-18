@@ -12,10 +12,15 @@
 #What features does site-76 bot v4 feature?
 <details><summary>Available Features</summary>
   | Features             | Availability |
-| -------------------- | ------------ |            
+  
+| -------------------- | ------------ |  
+  
 | Info                 |     ✅       |
+  
 | Moderation           |     ✅       | 
+  
 | OwnerOnly            |     ✅       |
+  
 | Util                 |     ❌       |
   </details>
   -- 
@@ -44,4 +49,5 @@
  --
   
  Want to join the community click [here](https://dsc.gg/site-76-server)
+ 
  **Too lazy to code? feel free to use my bot click [here](https://dsc.gg/site--76)**
