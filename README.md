@@ -3,7 +3,6 @@
 
 ## Requirements
 - Discord.js v13 (`npm install discord.js@latest`)
-- `applications.commands` scope enabled for your bot in Developer Portal (For Slash Cmds).
 - NodeJS v17.7 or higher
 - Basic knowledge of JS or Discord.JS
 
@@ -52,3 +51,7 @@
  Want to join the community click [here](https://dsc.gg/site-76-server)
  
  **Too lazy to code? feel free to use my bot click [here](https://dsc.gg/site--76)**
+ 
+ -- 
+ 
+ ##Goanna be working on slash commands once I'm back from my birthday thanks for checking this repo in the meantime
