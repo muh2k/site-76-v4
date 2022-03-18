@@ -1,5 +1,5 @@
 const {MessageEmbed, Collection, Client, Discord, Permissions} = require('discord.js');
-
+//name category and description of the bot aswell as it's usage
 module.exports = {
     name: "kick",
     category: "moderation",
@@ -7,15 +7,17 @@ module.exports = {
     usage: "[name | nickname | mention | ID] <reason> (optional)",
     aliases: ["k"],
         run: async (client, message, args, prefix) => {
+            try {
+            // permissions required for the user and bot
             if (!message.member.permissions.has(Permissions.FLAGS.PRIORITY_SPEAKER)) return message.channel.send("**You Do Not Have The Secret! - [PRIORITY_SPEAKER]**");
             if (!message.guild.me.permissions.has(Permissions.FLAGS.KICK_MEMBERS)) return message.channel.send("**I Do Not Have Permissions To Kick Members! - [KICK_MEMBERS]**");
 
-        try {
-  
 
+  
+         // defining the log channel the reason etc,
             var reason = args.slice(1).join(" ");
 
-            const logChannel = user.guild.channels.find(ch => ch.name.includes('mod-log'));
+            const logChannel = user.guild.channels.find(ch => ch.name.includes('mod-log')); // make sure to have the log channel called mod-log 
             const kickMessage = new MessageEmbed()
             .setColor("RED")
             .setDescription(`**${message.guild.name} Just got absolutely booted for - ${reason || "No Reason!"} By ${message.Author}**`)
@@ -42,6 +44,7 @@ module.exports = {
                 kickMember.send({ embeds: [embed] }).then(() =>
                     kickMember.kick()).catch(() => null)
             } catch {
+                //kick the members
                 kickMember.kick()
             }
             if (reason) {
@@ -57,6 +60,7 @@ module.exports = {
                 .setDescription(`**${kickMember.user.username}** Has Been Kicked For No Reason`)
             message.channel.send({ embeds: [embed3] });
             }
+            //error handling
         } catch (e) {
             return message.channel.send(`**${e.message}**`)
         }

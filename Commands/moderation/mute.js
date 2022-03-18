@@ -1,7 +1,7 @@
 const {MessageEmbed, Collection, Client, Discord, data, guild, Permissions} = require('discord.js');
 const cooldown = new Set();
 const ms = require('ms');
-
+//name category and description of the bot aswell as it's usage
 module.exports = {
     name: "mute",
     category: "moderation",
@@ -11,15 +11,15 @@ module.exports = {
 
     run: async (client, message, args, prefix) => {
 
-
+// permissions of the bot and user required
         if (!message.member.permissions.has(Permissions.FLAGS.MANAGE_MESSAGES)) return message.channel.send("**You Do Not Have Permissions To mute members! - [MANAGE_MESSAGES]**");
         if (!message.guild.me.permissions.has(Permissions.FLAGS.MANAGE_ROLES)) return message.channel.send("**I Do Not Have Permissions To manage roles! - [MANAGE_ROLES]**");
-
+//defining variables
 const member = message.mentions.members.first();
 let time = args[1];
 const reason = args.slice(2).join(' ');
 const role = message.guild.roles.cache.find(role => role.name === 'Muted')
-
+// change channel Id to the id of the channel you wish to log to
 const channelId = "889581003495067688"
 const channel = member.guild.channels.cache.get(channelId);
 
@@ -62,13 +62,13 @@ const log = new MessageEmbed()
 .setTitle(`Success`)
 .setDescription(`${message.author} Just muted ${member.user} for ${ms(ms(time))} with the reason ${reason}`)
 .setColor('2E56B8')
-.setImage('https://cdn.discordapp.com/emojis/872195846987460659.png?v=1')
+.setImage('https://cdn.discordapp.com/emojis/872195846987460659.png?v=1') // change image link to what you want to be in the embed
 .setThumbnail(member.user.displayAvatarURL({ dynamic: true }))
 .setFooter(new Date().toLocaleString())
-
+//adding the role sending a message in the channel and logging
 await member.roles.add(role2)
 message.channel.send(`${member.user.username} has been muted for ${ms(ms(time))}, Reason: ${reason}`) && channel.send({ embeds: [log] });
-
+// after the time is gone remove the role from the user
 setTimeout(() => {
     member.roles.remove(role2)
 }, ms(time))

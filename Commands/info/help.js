@@ -1,14 +1,15 @@
 const { MessageEmbed } = require('discord.js')
 const { readdirSync } = require('fs')
-
+//name category and description of the bot aswell as it's usage
 module.exports = {
     name: 'help',
     aliases: ['h'],
+    category: "info",
     description: "Shows all available bot commands.",
     run: async(client, message, args, prefix) => {
         if(!args[0]) {
             let categories = [];
-
+// finding the command folders
             readdirSync("./Commands/").forEach((dir) => {
                 const commands = readdirSync(`./Commands/${dir}/`).filter((file) => file.endsWith(".js"))
             
@@ -28,7 +29,7 @@ module.exports = {
             };
             categories.push(data);
             })
-
+      // starting the help embed
             const embed = new MessageEmbed()
             .setTitle("Commands")
             .addFields(categories)
@@ -61,6 +62,7 @@ module.exports = {
             )
             .setFooter(`Requested by ${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true}))
             .setColor(message.guild.me.displayHexColor);
+            //sending the embed
             return message.channel.send({ embeds: [embed]});
         }
     }

@@ -1,15 +1,13 @@
 const {MessageEmbed, Collection, Client, Discord, Permissions} = require('discord.js');
-
+//name category and description of the bot aswell as it's usage
 module.exports = {
     name: 'ping',
     category: 'info',
     description: '[ping] Returns latency and API ping',
     usage: '[name]',
  run : async(client, message, args, prefix) => {
-        if (!message.member.permissions.has(Permissions.FLAGS.PRIORITY_SPEAKER)) return message.channel.send("**You Do Not Have The Secret! - [PRIORIY_SPEAKER]**");
-
-
-
+     
+    // the actual command
         const msg = await message.channel.send(`🏓 Pinging...`)
         const embed = new MessageEmbed()
             .setTitle('Pong!')

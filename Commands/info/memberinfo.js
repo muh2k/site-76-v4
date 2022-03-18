@@ -1,10 +1,11 @@
 const {MessageEmbed, Collection, Client, Discord, data, guild, Permissions} = require('discord.js');
 const { readdirSync } = require('fs');
 const moment = require('moment');
-
+//name category and description of the bot aswell as it's usage
 module.exports = {
     name: 'memberinfo',
     aliases: ['mi'],
+    category: "info",
     description: "Shows info about selected user.",
     run: async(client, message, args, prefix) => {
 
