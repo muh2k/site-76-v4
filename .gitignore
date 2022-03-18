@@ -127,3 +127,5 @@ dist
 .pnp.*
 #tokens and variables
 config.json
+#making it look cleaner
+package-log.json
