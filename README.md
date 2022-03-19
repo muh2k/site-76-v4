@@ -12,13 +12,13 @@
 <details><summary>Available Features</summary>
 | Features and avaliability  
   
-- [x] Info
+- [x] Info  | ✅
   
-- [x] Moderation 
+- [x] Moderation | ✅
   
-- [x] OwnerOnly
+- [x] OwnerOnly | ✅
   
-- [ ] Util  
+- [ ] Util | ❌
                  
   </details>
   -- 
