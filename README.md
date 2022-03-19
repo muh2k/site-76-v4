@@ -11,9 +11,13 @@
 #What features does site-76 bot v4 feature?
 <details><summary>Available Features</summary>
 | Features and avaliability  
+  
 - [x] Info
+  
 - [x] Moderation 
+  
 - [x] OwnerOnly
+  
 - [ ] Util  
                  
   </details>
