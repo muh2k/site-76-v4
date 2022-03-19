@@ -52,4 +52,4 @@
  
  -- 
  
- ##Goanna be working on slash commands once I'm back from my birthday thanks for checking this repo in the meantime
+
