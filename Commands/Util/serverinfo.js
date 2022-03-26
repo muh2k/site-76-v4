@@ -1,4 +1,4 @@
-const Discord = module.require("discord.js");
+const { MessageEmbed, Collection, Client, Discord, Permissions }= module.require("discord.js");
 const moment = require("moment");
 require("moment-duration-format");
 
@@ -8,11 +8,8 @@ module.exports = {
   category: "util",
   description: "Shows info about a server",
 run: async (client, message, args) => {
-// only allowing owner to access command
-    if (message.author.id != OWNER_ID) 
-    return message.channel.send(
-      `<:heelp:872195846987460659> Coming soon try again later <:heelp:872195846987460659>`
-    );
+// Checking permissions
+if (!message.member.permissions.has(Permissions.FLAGS.MANAGE_MESSAGES)) return message.channel.send("**You Do Not Have The Secret! - [MANAGE_MESSAGES]**");
 
     //command
     const mention = message.member;
@@ -47,7 +44,7 @@ run: async (client, message, args) => {
       india: "India",
     };
     //creating the embed
-    const serverembed = new Discord.MessageEmbed()
+    const serverembed = new MessageEmbed()
       .setAuthor(`${message.guild.name}`, message.guild.iconURL())
       .setThumbnail(servericon)
       .addField(
@@ -92,5 +89,6 @@ run: async (client, message, args) => {
       .setTimestamp();
 // sending the embed
     message.channel.send({ embeds: [serverembed] });
+    message.channel.send("I honestly currently have no clue how this works if it fails let me know || This message will be removed on the 26/03/2022");
   },
 };
