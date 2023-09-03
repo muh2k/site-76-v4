@@ -46,9 +46,6 @@
   
  --
   
- Want to join the community click [here](https://dsc.gg/site-76-server)
- 
- **Too lazy to code? feel free to use my bot click [here](https://dsc.gg/site--76)**
  
  -- 
  
